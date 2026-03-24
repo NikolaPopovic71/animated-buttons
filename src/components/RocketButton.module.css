@@ -23,18 +23,32 @@
 }
 
 @keyframes flicker {
-  from { transform: scaleY(1) scaleX(0.9); }
-  to   { transform: scaleY(1.35) scaleX(1.1); }
+  from {
+    transform: scaleY(1) scaleX(0.9);
+  }
+  to {
+    transform: scaleY(1.35) scaleX(1.1);
+  }
 }
 
 .starDot {
   animation: twinkle 0.8s infinite alternate;
 }
-.d1 { animation-delay: 0.2s; }
-.d2 { animation-delay: 0.5s; }
-.d3 { animation-delay: 0.35s; }
+.d1 {
+  animation-delay: 0.2s;
+}
+.d2 {
+  animation-delay: 0.5s;
+}
+.d3 {
+  animation-delay: 0.35s;
+}
 
 @keyframes twinkle {
-  from { opacity: 0.2; }
-  to   { opacity: 0.8; }
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.8;
+  }
 }

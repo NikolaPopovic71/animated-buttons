@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from "react";
 import {
   RocketButton,
   PlantButton,
@@ -6,22 +6,22 @@ import {
   CoffeeButton,
   ChristmasTreeButton,
   BookButton,
-} from './components'
-import styles from './App.module.css'
+} from "./components";
+import styles from "./App.module.css";
 
 const BUTTONS = [
-  { id: 'rocket',   label: 'Rocket Launch',    Component: RocketButton },
-  { id: 'plant',    label: 'Plant Growing',     Component: PlantButton },
-  { id: 'pizza',    label: 'Pizza Delivery',    Component: PizzaButton },
-  { id: 'coffee',   label: 'Coffee Brewing',    Component: CoffeeButton },
-  { id: 'xmas',     label: 'Christmas Tree',    Component: ChristmasTreeButton },
-  { id: 'book',     label: 'Book Delivery',     Component: BookButton },
-] as const
+  { id: "rocket", label: "Rocket Launch", Component: RocketButton },
+  { id: "plant", label: "Plant Growing", Component: PlantButton },
+  { id: "pizza", label: "Pizza Delivery", Component: PizzaButton },
+  { id: "coffee", label: "Coffee Brewing", Component: CoffeeButton },
+  { id: "xmas", label: "Christmas Tree", Component: ChristmasTreeButton },
+  { id: "book", label: "Book Delivery", Component: BookButton },
+] as const;
 
 export default function App() {
-  const [completedCount, setCompletedCount] = useState(0)
+  const [completedCount, setCompletedCount] = useState(0);
 
-  const handleComplete = () => setCompletedCount(c => c + 1)
+  const handleComplete = () => setCompletedCount((c) => c + 1);
 
   return (
     <div className={styles.page}>
@@ -33,7 +33,8 @@ export default function App() {
         </p>
         {completedCount > 0 && (
           <p className={styles.counter}>
-            {completedCount} animation{completedCount !== 1 ? 's' : ''} completed
+            {completedCount} animation{completedCount !== 1 ? "s" : ""}{" "}
+            completed
           </p>
         )}
       </header>
@@ -56,7 +57,9 @@ export default function App() {
         >
           GitHub
         </a>
-        <span className={styles.footerDot} aria-hidden="true">·</span>
+        <span className={styles.footerDot} aria-hidden="true">
+          ·
+        </span>
         <a
           href="https://ponitech.pro"
           target="_blank"
@@ -67,5 +70,5 @@ export default function App() {
         </a>
       </footer>
     </div>
-  )
+  );
 }

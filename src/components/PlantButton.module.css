@@ -43,12 +43,27 @@
 .drop {
   animation: drip 1.1s ease-in infinite;
 }
-.d1 { animation-delay: 0.35s; }
-.d2 { animation-delay: 0.7s; }
+.d1 {
+  animation-delay: 0.35s;
+}
+.d2 {
+  animation-delay: 0.7s;
+}
 
 @keyframes drip {
-  0%   { opacity: 0; transform: translateY(0); }
-  25%  { opacity: 1; }
-  80%  { opacity: 0; transform: translateY(14px); }
-  100% { opacity: 0; transform: translateY(14px); }
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
 }
