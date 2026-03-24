@@ -4,7 +4,7 @@ A set of **6 animated React button components** built with TypeScript and CSS Mo
 
 Each button has three states (`idle → running → done`) driven by a shared `useButtonAnimation` hook. Click again in the `done` state to reset.
 
-**Live demo:** https://animated-buttons.netlify.app
+**Live demo:** [animated-buttons.netlify.app](https://ponitech-animated-buttons.netlify.app/)
 
 ---
 
