@@ -1,0 +1,53 @@
+.progressRing {
+  transition: stroke-dashoffset 6.5s linear;
+}
+.progressRing.running,
+.progressRing.done {
+  stroke-dashoffset: 0;
+}
+
+.fill {
+  transform: scaleY(0);
+  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fill.running {
+  transform: scaleY(0.5);
+}
+.fill.done {
+  transform: scaleY(1);
+}
+
+.drip {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 0;
+  animation: dripFall 0.55s ease-in infinite;
+}
+.d1 { animation-delay: 0.18s; }
+.d2 { animation-delay: 0.36s; }
+@keyframes dripFall {
+  from { stroke-dashoffset: 0;  opacity: 1; }
+  to   { stroke-dashoffset: 20; opacity: 0; }
+}
+
+.steam {
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  opacity: 0;
+  animation: steamRise 1.8s ease-in-out infinite;
+}
+.s1 { animation-delay: 0.6s; }
+.s2 { animation-delay: 1.2s; }
+@keyframes steamRise {
+  0%   { stroke-dashoffset: 30; opacity: 0; }
+  40%  { opacity: 0.9; }
+  100% { stroke-dashoffset: 0;  opacity: 0; }
+}
+
+.bean {
+  animation: beanFloat 2s ease-in-out infinite;
+}
+.b1 { animation-delay: 0.7s; }
+@keyframes beanFloat {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50%     { transform: translateY(-3px) rotate(12deg); }
+}

@@ -1,0 +1,68 @@
+.tree {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tree.running {
+  animation: runTree 7s linear forwards;
+}
+.tree.done {
+  animation: showTree 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+@keyframes runTree {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg); }
+  15%  { transform: translateX(4px) translateY(-4px) rotate(15deg); }
+  100% { transform: translateX(60px) translateY(-8px) rotate(15deg); }
+}
+@keyframes showTree {
+  from { transform: translateX(60px) translateY(-8px) rotate(15deg); }
+  to   { transform: translateX(0) translateY(0) rotate(0deg); }
+}
+
+.legs rect {
+  transform-origin: top center;
+}
+.legs.running rect:first-child {
+  animation: legL 0.5s linear infinite;
+}
+.legs.running rect:last-child {
+  animation: legR 0.5s linear infinite;
+}
+@keyframes legL {
+  0%,100% { transform: rotate(0deg); }
+  50%     { transform: rotate(35deg); }
+}
+@keyframes legR {
+  0%,100% { transform: rotate(0deg); }
+  50%     { transform: rotate(-35deg); }
+}
+
+.star {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.star.done {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.2s;
+}
+
+.ribbon {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  transition: stroke-dashoffset 1.2s ease;
+}
+.ribbon.done {
+  stroke-dashoffset: 0;
+  transition-delay: 0.4s;
+}
+
+.ball {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.ball.done        { opacity: 1; transform: scale(1); transition-delay: 0.1s; }
+.ball.done.bd1    { transition-delay: 0.2s; }
+.ball.done.bd2    { transition-delay: 0.35s; }
+.ball.done.bd3    { transition-delay: 0.5s; }
+.ball.done.bd4    { transition-delay: 0.65s; }
