@@ -24,6 +24,7 @@
 .btn:hover:not(:disabled) {
   filter: brightness(1.14);
   border-color: rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
 }
 
 .btn:active:not(:disabled) {
@@ -62,4 +63,10 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
 }
